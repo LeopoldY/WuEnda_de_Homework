@@ -241,6 +241,7 @@ d = model(train_set_x, trainSet_y, test_set_x, testSet_y, num_iterations=2000, l
 
 # 绘制图
 costs = np.squeeze(d['costs'])
+print(costs)
 plt.plot(costs)
 plt.ylabel('cost')
 plt.xlabel('iterations (per hundreds)')
