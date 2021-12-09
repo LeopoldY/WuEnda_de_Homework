@@ -8,7 +8,6 @@ m_train = trainSet_y.shape[1]  # 训练集里图片的数量。
 m_test = testSet_y.shape[1]  # 测试集里图片的数量。
 num_px = trainSet_x_orig.shape[1]  # 训练、测试集里面的图片的宽度和高度（均为64x64）。
 
-# 现在看一看我们加载的东西的具体情况
 print("训练集的数量: m_train = " + str(m_train))
 print("测试集的数量 : m_test = " + str(m_test))
 print("每张图片的宽/高 : num_px = " + str(num_px))
@@ -25,7 +24,7 @@ train_set_x_flatten = trainSet_x_orig.reshape(trainSet_x_orig.shape[0], -1).T
 # 将测试集的维度降低并转置。
 test_set_x_flatten = testSet_x_orig.reshape(testSet_x_orig.shape[0], -1).T
 
-print("训练集降维最后的维度： " + str(train_set_x_flatten.shape))
+print("训练集降维最后的维度 : " + str(train_set_x_flatten.shape))
 print("训练集_标签的维数 : " + str(trainSet_y.shape))
 print("测试集降维之后的维度: " + str(test_set_x_flatten.shape))
 print("测试集_标签的维数 : " + str(testSet_y.shape))
