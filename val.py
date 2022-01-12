@@ -1,6 +1,7 @@
-from model.Model import predict
-import numpy as np
 import cv2
+import numpy as np
+
+from model.Model import predict
 
 params = np.load(r"output/params.npz")
 w = params['arr_0']
