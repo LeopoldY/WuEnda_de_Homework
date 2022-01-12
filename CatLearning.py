@@ -36,7 +36,7 @@ trainSet_x = trainSet_x_flatten / 255
 testSet_x = testSet_x_flatten / 255
 
 # using a single func model to simplify the call of functions
-def model(X_train, Y_train, X_test, Y_test, num_iterations=2000, learning_rate=0.5, print_cost=False, save_by_steps = False):
+def train(X_train, Y_train, X_test, Y_test, num_iterations=2000, learning_rate=0.5, print_cost=False, save_by_steps = False):
     """
     通过调用之前实现的函数来构建逻辑回归模型
     
@@ -81,7 +81,7 @@ if __name__ == "__main__":
     if not os.path.exists('./output'):
         os.mkdir('./output')
     print("====================测试model====================")
-    d = model(trainSet_x, trainSet_y, testSet_x, testSet_y, num_iterations=2000, learning_rate=0.005, print_cost=True, save_by_steps=False)
+    d = train(trainSet_x, trainSet_y, testSet_x, testSet_y, num_iterations=2000, learning_rate=0.005, print_cost=True, save_by_steps=False)
 
     # 保存所得参数
     np.savez('output/params.npz', d['w'], d['b'])
